@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {}
+
+@layer components {
+    .card {
+        @apply mx-10 p-10 rounded-md shadow-md shadow-slate-900 my-24 text-wrap;
+    }
+    .card h1 {
+        @apply font-serif text-white text-5xl p-4;
+    }
+    .card p {
+        @apply  text-white first-letter:text-3xl first-letter:font-serif first-line:font-mono font-sans;
+    }
+}
+
+@layer utilities {}

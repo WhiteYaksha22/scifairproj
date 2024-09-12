@@ -1,10 +1,14 @@
 <script>
     import "../app.css";
+    import { scroll } from "./stores";
     import Header from './Header.svelte';
     import Footer from "./Footer.svelte";
-    let nav_links = ["About", "FAQ", ["Black Holes", "Categories"]];
+    export let data;
 </script>
 
-<Header {nav_links} />
-<slot />
+<svelte:window bind:scrollY={$scroll} />
+
+
+<Header nav_links={data.cats}/>
+<slot style="height: calc(100vh - 74px)"/>
 <Footer />
